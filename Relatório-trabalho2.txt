@@ -1,4 +1,4 @@
-Este trabalho apresenta a implementação de uma aplicação de imobiliária utilizando Java RMI, conforme as orientações da disciplina de Sistemas Distribuídos. O serviço remoto permite cadastrar imóveis, listar os disponíveis, realizar vendas e consultar o histórico de transações, tudo organizado de forma distribuída.
+Este trabalho apresenta a implementação de uma aplicação de imobiliária utilizando Java RMI. O serviço remoto permite cadastrar imóveis, listar os disponíveis, realizar vendas e consultar o histórico de transações, tudo organizado de forma distribuída.
 
 A estrutura do sistema conta com a superclasse Imovel, que possui como agregação a classe Cliente representando o proprietário. Três tipos de imóveis foram definidos como subclasses de Imovel: Casa, Apartamento e Sitio, cada uma com atributos específicos. A interface remota Vendas define quatro operações principais: cadastrarImovel, venderImovel, listarImoveisJson e listarVendasJson. Duas implementações dessa interface foram desenvolvidas: VendaResidencial, que gerencia casas e apartamentos, e VendaRural, responsável pelos sítios.
 
