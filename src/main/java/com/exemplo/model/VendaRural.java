@@ -23,7 +23,6 @@ public class VendaRural extends UnicastRemoteObject implements Vendas {
 
     @Override
     public void cadastrarImovel(Imovel imovel) throws RemoteException {
-        // Só aceita Sitio
         if (imovel instanceof Sitio) {
             imoveisRurais.add(imovel);
         } else {

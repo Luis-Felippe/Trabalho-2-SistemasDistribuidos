@@ -2,10 +2,6 @@ package com.exemplo.model;
 
 import java.io.Serializable;
 
-/**
- * Classe base para representar um Imóvel genérico.
- * Implementa Serializable para permitir envio por valor via RMI.
- */
 public class Imovel implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -13,7 +9,7 @@ public class Imovel implements Serializable {
     private String id;
     private String endereco;
     private double preco;
-    private Cliente proprietario; // Agregação: um Imóvel TEM-UM Cliente
+    private Cliente proprietario; 
 
     public Imovel(String id, String endereco, double preco, Cliente proprietario) {
         this.id = id;
@@ -22,7 +18,6 @@ public class Imovel implements Serializable {
         this.proprietario = proprietario;
     }
 
-    // Getters
     public String getId() {
         return id;
     }
