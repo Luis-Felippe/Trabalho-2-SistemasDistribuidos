@@ -7,15 +7,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 public class Main {
-@RequestMapping("/")
-String home() {
-return "Olá, seja bem vindo ao teste de Spring Boot para disciplina de Sistemas Distribuídos";
-}
-@RequestMapping("/nome/{nome}")
-String piada(@PathVariable String nome) {
-return "Olá " + nome + ", você vai realmente conseguir passar nessa disciplina?";
-}
-public static void main(String[] args) {
-SpringApplication.run(Main.class, args);
-}
+    @RequestMapping("/")
+    String home() {
+    return "Olá, seja bem vindo ao teste de Spring Boot para disciplina de Sistemas Distribuídos";
+    }
+    @RequestMapping("/nome/{nome}")
+    String piada(@PathVariable String nome) {
+    return "Olá " + nome + ", você vai realmente conseguir passar nessa disciplina?";
+    }
+    public static void main(String[] args) {
+
+        SpringApplication.run(Main.class, args);
+    }
 }
