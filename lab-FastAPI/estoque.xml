@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<estoque><aparelho><id>1</id><nome>test</nome><marca>teste</marca><preco>100.0</preco><categoria>alguma coisa</categoria><deposito>sim</deposito></aparelho></estoque>
