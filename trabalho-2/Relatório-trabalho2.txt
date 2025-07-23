@@ -1,21 +1,5 @@
-Durante muito tempo na história, a criptografia foi sendo utilizada unicamente para promover a confidencialidade de informações sensíveis, a partir das cifras simétricas. Esses esquemas, a partir de uma chave privada compartilhada permite a encriptação e decriptação de dados. 
+Este trabalho apresenta a implementação de uma aplicação de imobiliária utilizando Java RMI. O serviço remoto permite cadastrar imóveis, listar os disponíveis, realizar vendas e consultar o histórico de transações, tudo organizado de forma distribuída.
 
-Contudo, tanto a sua evidência histórica mais antiga, o Scytale, utilizado pelos espartanos, quanto os melhores algoritmos da atualidade dessa categoria, que são empregados em computadores, também possuem o principal desafio dessa categoria criptográfica: garantir uma comunicação segura para a realização da troca de chaves.
-A solução desse problema foi desenvolvida recentemente, devido à criptografia assimétrica, apresentada pela primeira vez no algoritmo RSA \cite{}. Esse novo modelo criptográfico propõe o compartilhamento de informações de forma segura, a partir da utilização de uma chave pública, que permite encriptar os dados, e uma privada, que os decripta, e baseia-se na aplicação de problemas matemáticos de difícil resolução, como a fatoração de inteiros e o problema do logaritmo discreto.
+A estrutura do sistema conta com a superclasse Imovel, que possui como agregação a classe Cliente representando o proprietário. Três tipos de imóveis foram definidos como subclasses de Imovel: Casa, Apartamento e Sitio, cada uma com atributos específicos. A interface remota Vendas define quatro operações principais: cadastrarImovel, venderImovel, listarImoveisJson e listarVendasJson. Duas implementações dessa interface foram desenvolvidas: VendaResidencial, que gerencia casas e apartamentos, e VendaRural, responsável pelos sítios.
 
-Ele também possibilitou a resolução de problemas de autenticidade das mensagens
-
-Mesmo com o surgimento dessa solução tão vantajosa para a segurança digital, o fácil acesso à chave pública, torna possível o envio de mensagens encriptadas feitas por terceiros, por não deixarem evidências do remetente nas mensagens. Tendo isso em mente, em 1976, W.Diffie e M.Hellman desenvolveram o primeiro algoritmo de assinatura digital
-
-Contudo, um dos seus grandes desafios sempre foi garantir o compartilhamento seguro da chave. A evidência história mais antiga de sua utilização é o Scytale, empregado pelos espartanos, que consiste de um bastão envolto por uma fina tira onde a mensagem deveria ser escrita. Ela, assim como toda cifra simétrica, possui o grande problema de não possibilitar o compartilhamento seguro da chave, que nesse caso 
-
-Durante o início da era moderna e com o surgimento dos computadores, essa área vem evoluindo constantemente e, com isso, tem impulsionado avanços em diversos setores. 
-
-Em 
-
-
-Ao longo da história, a criptografia vem sendo utilizada de forma estratégica para manter uma comunicação segura entre indivíduos e promover a confidencialidade de informações sensíveis. 
-
-Durante o início da era moderna e com o surgimento dos computadores, essa área vem evoluindo constantemente e, com isso, tem impulsionado avanços em diversos setores por meio da proteção de dados. 
-
-Entretanto, à medida em que novos esquemas criptográficos são desenvolvidos, novos métodos de romper a sua proteção também surgem, uma vez que as informações importantes de grandes empresas e sistemas, dependem diretamente da segurança promovida por eles.
+A comunicação segue o modelo cliente-servidor do RMI, garantindo passagem de objetos remotos por referência e dados por valor. Para atender ao requisito de representação externa de dados, as informações são convertidas em JSON usando a biblioteca Gson, permitindo que os resultados sejam apresentados de forma independente da tecnologia do cliente. O cliente de testes, chamado ClienteRMI, executa todas as operações em modo texto e exibe os resultados em JSON, confirmando o funcionamento de ponta a ponta.
